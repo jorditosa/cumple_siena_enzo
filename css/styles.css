@@ -1,0 +1,151 @@
+:root {
+  --primario: rgb(245, 159, 119);
+  --secundario: rgb(173, 226, 142);
+  --terciario: rgb(210, 221, 107);
+  --blanco: #fff;
+
+  --main-font: "Montserrat Alternates", sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#menu {
+  background-color: var(--primario) !important;
+}
+#menu__kahoot {
+  background-color: var(--terciario);
+}
+#main__image {
+  width: 100%;
+  max-height: 40rem;
+}
+.kahoot {
+  display: inline;
+  width: 20rem;
+}
+.kahoot button {
+  width: 75%;
+  margin: 0.5rem 0.5rem;
+  border-radius: 5rem;
+}
+.kahoot a {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+  color: #000000;
+}
+
+#menu a {
+  font-size: 18px;
+  color: #000000;
+}
+.carousel-inner {
+  height: auto;
+}
+@media (min-width: 768px) {
+  .image__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    margin: 2rem 0;
+    object-fit: cover;
+    gap: 1rem;
+  }
+}
+#titol__serveis {
+  background-color: var(--primario);
+  padding: 3rem;
+  margin: 0%;
+}
+
+.image__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  padding: 3rem 3rem;
+  object-fit: cover;
+  gap: 0.5rem;
+  background-color: var(--primario);
+}
+.image__peque {
+  object-fit: cover;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+#info__covid {
+  background-color: var(--secundario) !important;
+  text-align: center;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+@media (min-width: 768px) {
+  .convocatoria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: middle;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.convocatoria {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: middle;
+  justify-content: center;
+  gap: 1rem;
+}
+.convocatoria__texto {
+  font-size: 1.5rem;
+  justify-content: center;
+  margin: auto;
+  text-align: left;
+}
+.convocatoria__mapa {
+  overflow: hidden;
+}
+
+/*  CONTAINER GALLERY */
+
+.container-gallery {
+  display: grid;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  gap: 0.5rem;
+  grid-template-rows: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+
+  grid-auto-flow: row dense;
+
+  justify-items: stretch;
+  align-items: end;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blanco);
+}
+
+.picture img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.picture:nth-child(2n) {
+  grid-row-end: span 100%;
+}
+.picture:nth-child(8) {
+  order: -1;
+}
